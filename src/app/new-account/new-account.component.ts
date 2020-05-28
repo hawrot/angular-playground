@@ -15,7 +15,9 @@ export class NewAccountComponent {
         private loggingService: LoggingService,
         private accountsService: AccountsService
     ) {
-
+        this.accountsService.statusUpdate.subscribe(
+            (status: string) => alert('New status: ' + status)
+        );
     }
 
 
